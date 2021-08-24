@@ -25,3 +25,11 @@ cookbook_file '/home/vagrant/.ssh/config' do
     mode '0600'
     action :create
 end
+
+cookbook_file '/home/vagrant/.ssh/.ansible_vault_system_configs' do
+    source 'ansible_vault_system_configs'
+    owner 'vagrant'
+    group 'vagrant'
+    mode '0600'
+    action :create
+end
