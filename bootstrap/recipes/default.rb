@@ -34,20 +34,28 @@ cookbook_file '/home/vagrant/.ssh/.ansible_vault_system_configs' do
     action :create
 end
 
-group 'dev' do
+group 'drgeb' do
     append                true
-    comment               "Developers group"
-    group_name            "dev"
+    comment               "user group"
+    group_name            "drgeb"
     action                :create
 end
 
 user 'drgeb' do
     comment 'A random user'
     uid 1234
-    gid 'dev'
+    gid 'drgeb'
     home '/home/drgeb'
     shell '/bin/bash'
     password '$1$JJsvHslasdfjVEroftprNn4JHtDi'
+end
+
+group 'dev' do
+    append                true
+    comment               "Developers group"
+    group_name            "dev"
+    users                 "drgeb"
+    action                :create
 end
 
 # roles/example.rb
@@ -60,7 +68,7 @@ end
 # Additional User
 directory '/home/drgeb/' do
     owner 'drgeb'
-    group 'dev'
+    group 'drgeb'
     action :create
 end
 
@@ -94,3 +102,9 @@ cookbook_file '/home/drgeb/.ssh/.ansible_vault_system_configs' do
     mode '0600'
     action :create
 end
+
+# 'http request' do
+#     url "http://drgeb.com/bootstrap"
+#     message <xml request>
+#     action :get
+#   end
