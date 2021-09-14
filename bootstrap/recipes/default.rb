@@ -50,6 +50,13 @@ user 'drgeb' do
     password '$1$JJsvHslasdfjVEroftprNn4JHtDi'
 end
 
+# roles/example.rb
+sudo 'admins' do
+    users 'drgeb'
+    nopasswd true
+    groups 'sysadmins, dev'
+end
+
 # Additional User
 directory '/home/drgeb/' do
     owner 'drgeb'
