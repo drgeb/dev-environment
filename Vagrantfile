@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--memory", "4096"]
   end
 
+  config.vm.network "forwarded_port", guest: 443, host: 8443, protocol: "tcp"
+
   config.vm.provision "chef_solo" do |chef|
     chef.install = false
     chef.arguments = "--chef-license accept"

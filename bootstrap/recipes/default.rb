@@ -10,6 +10,14 @@ directory '/home/vagrant/.ssh' do
     action :create
 end
 
+cookbook_file '/home/vagrant/.ssh/github_rsa' do
+    source 'github_rsa'
+    owner 'vagrant'
+    group 'vagrant'
+    mode '0600'
+    action :create
+end
+
 cookbook_file '/home/vagrant/.ssh/id_rsa_bb' do
     source 'id_rsa_bb'
     owner 'vagrant'
@@ -74,15 +82,23 @@ end
 
 directory '/home/drgeb/.ssh' do
     owner 'drgeb'
-    group 'dev'
+    group 'drgeb'
     mode '0700'
+    action :create
+end
+
+cookbook_file '/home/vagrant/.ssh/github_rsa' do
+    source 'github_rsa'
+    owner 'drgeb'
+    group 'drgeb'
+    mode '0600'
     action :create
 end
 
 cookbook_file '/home/drgeb/.ssh/id_rsa_bb' do
     source 'id_rsa_bb'
     owner 'drgeb'
-    group 'dev'
+    group 'drgeb'
     mode '0600'
     action :create
 end
@@ -90,7 +106,7 @@ end
 cookbook_file '/home/drgeb/.ssh/config' do
     source 'config'
     owner 'drgeb'
-    group 'dev'
+    group 'drgeb'
     mode '0600'
     action :create
 end
@@ -98,7 +114,7 @@ end
 cookbook_file '/home/drgeb/.ssh/.ansible_vault_system_configs' do
     source 'ansible_vault_system_configs'
     owner 'drgeb'
-    group 'dev'
+    group 'drgeb'
     mode '0600'
     action :create
 end
