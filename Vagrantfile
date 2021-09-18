@@ -7,6 +7,10 @@ Vagrant.configure("2") do |config|
 
   config.omnibus.chef_version = :latest
 
+  if Vagrant.has_plugin?("vagrant-vbguest") then
+    config.vbguest.auto_update = false
+  end
+
   config.vm.provider "virtualbox" do |v|
     v.name = "DRGEB Developer Vagrant"
     v.customize ["modifyvm", :id, "--memory", "4096"]
