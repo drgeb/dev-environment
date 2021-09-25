@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
     v.name = "DRGEB Developer Vagrant"
-    v.customize ["modifyvm", :id, "--memory", "4096"]
+    v.customize ["modifyvm", :id, "--memory", "8192"]
   end
 
   config.vm.network "forwarded_port", guest: 443, host: 8443, protocol: "tcp"
