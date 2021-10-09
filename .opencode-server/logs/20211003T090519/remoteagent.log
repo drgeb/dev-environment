@@ -1,0 +1,19 @@
+[2021-10-03 09:05:19.715] [main] [info] Web UI available at http://0.0.0.0:3000
+[2021-10-03 09:06:14.748] [main] [error] Error: ENOENT: no such file or directory, stat '/home/openvscode-server-v1.60.2-linux-x64/favicon.ico'
+[2021-10-03 09:06:16.263] [main] [info] [17563e7f-d0b1-48dd-a001-fb193d1a8592] Socket upgraded for "/?reconnectionToken=17563e7f-d0b1-48dd-a001-fb193d1a8592&reconnection=false&skipWebSocketFrames=false".
+[2021-10-03 09:06:16.367] [main] [error] Error: ENOENT: no such file or directory, stat '/home/openvscode-server-v1.60.2-linux-x64/favicon.ico'
+[2021-10-03 09:06:16.427] [main] [info] [17563e7f-d0b1-48dd-a001-fb193d1a8592] Management connection is connected.
+[2021-10-03 09:06:16.593] [main] [info] [session:19d983f5-cc4a-449c-aa4d-357a045d5ddc] started watching fs
+[2021-10-03 09:06:17.878] [main] [info] [2fb08e71-61ff-4d61-bba0-8104ba8d1223] Socket upgraded for "/?reconnectionToken=2fb08e71-61ff-4d61-bba0-8104ba8d1223&reconnection=false&skipWebSocketFrames=false".
+[2021-10-03 09:06:19.787] [main] [info] [2fb08e71-61ff-4d61-bba0-8104ba8d1223] Extension host is started.
+[2021-10-03 09:06:22.382] [main] [info] [2fb08e71-61ff-4d61-bba0-8104ba8d1223] Extension host is connected.
+[2021-10-03 09:07:01.516] [main] [info] Installing extension: max-ss.cyberpunk
+[2021-10-03 09:07:15.535] [main] [info] Downloaded extension: max-ss.cyberpunk /home/workspace/.opencode-server/CachedExtensionVSIXs/max-ss.cyberpunk-1.2.14
+[2021-10-03 09:07:18.450] [main] [info] Extracted extension to /home/workspace/.opencode-server/extensions/.58de7276-0068-49d8-9e60-6fbfe1df6e80: max-ss.cyberpunk
+[2021-10-03 09:07:18.494] [main] [info] Renamed to /home/workspace/.opencode-server/extensions/max-ss.cyberpunk-1.2.14
+[2021-10-03 09:07:18.511] [main] [info] Extracting completed. max-ss.cyberpunk
+[2021-10-03 09:07:18.528] [main] [info] Extension installed successfully: max-ss.cyberpunk
+[2021-10-03 09:08:51.277] [main] [info] [session:19d983f5-cc4a-449c-aa4d-357a045d5ddc] closed watching fs
+[2021-10-03 09:08:51.283] [main] [info] [session:19d983f5-cc4a-449c-aa4d-357a045d5ddc] closed watching fs
+[2021-10-03 09:08:51.301] [main] [info] [17563e7f-d0b1-48dd-a001-fb193d1a8592] Management connection is disposed.
+[2021-10-03 09:08:52.449] [main] [info] [2fb08e71-61ff-4d61-bba0-8104ba8d1223] Extension host is disconnected.

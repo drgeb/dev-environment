@@ -10,8 +10,16 @@ directory '/home/vagrant/.ssh' do
     action :create
 end
 
-cookbook_file '/home/vagrant/.ssh/github_rsa' do
-    source 'github_rsa'
+cookbook_file '/home/vagrant/.ssh/id_rsa_github' do
+    source 'id_rsa_github'
+    owner 'vagrant'
+    group 'vagrant'
+    mode '0600'
+    action :create
+end
+
+cookbook_file '/home/vagrant/.ssh/id_rsa_github.pub' do
+    source 'id_rsa_github.pub'
     owner 'vagrant'
     group 'vagrant'
     mode '0600'
@@ -87,8 +95,16 @@ directory '/home/drgeb/.ssh' do
     action :create
 end
 
-cookbook_file '/home/vagrant/.ssh/github_rsa' do
-    source 'github_rsa'
+cookbook_file '/home/drgeb/.ssh/id_rsa_github' do
+    source 'id_rsa_github'
+    owner 'drgeb'
+    group 'drgeb'
+    mode '0600'
+    action :create
+end
+
+cookbook_file '/home/drgeb/.ssh/id_rsa_github.pub' do
+    source 'id_rsa_github.pub'
     owner 'drgeb'
     group 'drgeb'
     mode '0600'
