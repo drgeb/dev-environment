@@ -58,7 +58,7 @@ group 'drgeb' do
 end
 
 user 'drgeb' do
-    comment 'A random user'
+  comment 'Dr.GEB'
     uid 1234
     gid 'drgeb'
     home '/home/drgeb'
