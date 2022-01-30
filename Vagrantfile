@@ -13,7 +13,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
     v.name = "DRGEB Developer Vagrant"
-    v.customize ["modifyvm", :id, "--memory", "8192"]
+#    v.customize ["modifyvm", :id, "--memory", "8192"]
+    v.customize ["modifyvm", :id, "--cpus", `awk "/^processor/ {++n} END {print n}" /proc/cpuinfo 2> /dev/null || sh -c 'sysctl hw.logicalcpu 2> /dev/null || echo ": 2"' | awk \'{print \$2}\' `.chomp ]
+
   end
 
   config.vm.network "forwarded_port", guest: 443, host: 8443, protocol: "tcp"
